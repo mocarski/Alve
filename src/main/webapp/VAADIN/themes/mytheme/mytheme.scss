@@ -1,0 +1,212 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all factory.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all factory
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+
+  .v-margin-top {
+    padding-top: 0px;
+  }
+  .v-margin-bottom {
+    padding-bottom: 0px;
+  }
+  [class*="margin-top"] > tbody > [class*="firstrow"] > td {
+    padding-top: 0px;
+  }
+  [class*="margin-bottom"] > tbody > [class*="lastrow"] > td {
+    padding-bottom: 0px;
+  }
+  .v-absolutelayout-FrameColor {
+    background-color:#806544 ;
+  }
+  .v-nativebutton-LeftTop {
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-LeftBottom {
+    border-top: 5px solid;
+    border-left: 10px solid;
+    border-right: 5px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-RightTop {
+    border-top: 10px solid;
+    border-left: 5px solid;
+    border-right: 10px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-RightBottom {
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-MiddleLeft {
+    border-top: 5px solid;
+    border-left: 10px solid;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-MiddleRight {
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-right: 10px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-MiddleTop {
+    border-top: 10px solid;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-MiddleBottom {
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-Middle {
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-Only {
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-LeftOnly {
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 5px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-RightOnly {
+    border-top: 10px solid;
+    border-left: 5px solid;
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-nativebutton-MiddleOnly {
+    border-top: 10px solid;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 10px solid;
+    -webkit-border-image: url("img/frame.png") 30 round; /* Safari 3.1-5 */
+    -o-border-image: url("img/frame.png") 30 round; /* Opera 11-12.1 */
+    border-image: url("img/frame.png") 30 round;
+    background-color:white;
+  }
+  .v-horizontallayout-MarginTop {
+    margin-top: 25px;
+  }
+  .v-verticallayout-MarginTop {
+    margin-top: 25px;
+  }
+  .v-verticallayout-MarginTopAndBottom {
+    margin-top: 25px;
+    margin-Bottom: 25px;
+  }
+  .v-formlayout-MarginTop {
+    margin-top: 25px;
+  }
+  .v-label SmallMarginTop {
+    margin-top: 10px;
+  }
+  .v-button-MarginForButton {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .v-label-FormLayoutFont {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  @media print {
+    body, html, #wrapper {
+      width: 100%;
+    }
+  }
+}
