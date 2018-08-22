@@ -7,7 +7,7 @@
 //$v-font-weight: 300;
 //$v-font-family: "Open Sans", sans-serif;
 
-// Defines the border used by all factory.
+// Defines the border used by all tableItemFactory.
 //$v-border: 1px solid (v-shade 0.7);
 //$v-border-radius: 4px;
 
@@ -16,7 +16,7 @@
 // Affects the color of content areas, e.g  Panel and Window content, TextField input etc
 //$v-app-background-color: $v-background-color;
 
-// Affects the visual appearance of all factory
+// Affects the visual appearance of all tableItemFactory
 //$v-gradient: v-linear 8%;
 //$v-bevel-depth: 30%;
 //$v-shadow-opacity: 5%;
@@ -34,21 +34,6 @@
 @mixin mytheme {
   @include valo;
 
-  .v-margin-top {
-    padding-top: 0px;
-  }
-  .v-margin-bottom {
-    padding-bottom: 0px;
-  }
-  [class*="margin-top"] > tbody > [class*="firstrow"] > td {
-    padding-top: 0px;
-  }
-  [class*="margin-bottom"] > tbody > [class*="lastrow"] > td {
-    padding-bottom: 0px;
-  }
-  .v-absolutelayout-FrameColor {
-    background-color:#806544 ;
-  }
   .v-nativebutton-LeftTop {
     border-top: 10px solid;
     border-left: 10px solid;
@@ -179,30 +164,69 @@
     border-image: url("img/frame.png") 30 round;
     background-color:white;
   }
-  .v-horizontallayout-MarginTop {
-    margin-top: 25px;
-  }
-  .v-verticallayout-MarginTop {
-    margin-top: 25px;
-  }
-  .v-verticallayout-MarginTopAndBottom {
-    margin-top: 25px;
-    margin-Bottom: 25px;
-  }
-  .v-formlayout-MarginTop {
-    margin-top: 25px;
-  }
-  .v-label SmallMarginTop {
+
+  .v-absolutelayout-FrameColorAndMarginTopBottom {
+    background-color:#806544 ;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
-  .v-button-MarginForButton {
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+  .v-verticallayout-MarginTopAndBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  .v-label-FormLayoutFont {
-    font-size: 14px;
-    font-weight: 400;
+
+  .v-horizontallayout-MarginTopAndBottom {
+    margin-top: 10px;
+    margin-Bottom: 10px;
   }
+
+  .v-formlayout-MarginTopAndBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .v-button-MarginTopAndBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .v-formlayout-MarginBottom {
+    margin-bottom: 10px;
+  }
+
+  //.v-margin-top {
+  //  padding-top: 0px;
+  //}
+  //.v-margin-bottom {
+  //  padding-bottom: 0px;
+  //}
+  //[class*="margin-top"] > tbody > [class*="firstrow"] > td {
+  //  padding-top: 0px;
+  //}
+  //[class*="margin-bottom"] > tbody > [class*="lastrow"] > td {
+  //  padding-bottom: 0px;
+  //}
+  //.v-horizontallayout-MarginTop {
+  //  margin-top: 25px;
+  //}
+  //.v-verticallayout-MarginTop {
+  //  margin-top: 25px;
+  //}
+  //.v-formlayout-MarginTop {
+  //  margin-top: 25px;
+  //}
+  //.v-label SmallMarginTop {
+  //  margin-top: 10px;
+  //}
+  //.v-button-MarginForButton {
+  //  margin-top: 30px;
+  //  margin-bottom: 30px;
+  //}
+  //.v-label-FormLayoutFont {
+  //  font-size: 14px;
+  //  font-weight: 400;
+  //}
 
   @media print {
     body, html, #wrapper {
